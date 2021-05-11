@@ -1,0 +1,81 @@
+import java.awt.*;
+import javax.swing.*;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author 91942
+ */
+public class TabbedEx extends FrameDemo {
+
+    private static void setTitle(String string) {
+        
+    }
+
+    private static void setSize(int i, int i0) {
+        
+    }
+
+    private static void setVisible(boolean b) {
+        
+        
+    }
+
+    private static void setDefaultCloseOperation(int EXIT_ON_CLOSE) {
+        
+    }
+    TabbedEx()
+    {
+        Container c1= getContentPane();
+        JTabbedPane jt= new JTabbedPane();
+        jt.addTab("Capitals", new Capital());
+        jt.addTab("Country", new Country());
+        c1.add(jt);
+        
+    }
+    
+    public static void main(String args[])
+            
+    {
+    
+        setTitle("JTabbed Pane");
+        setSize(400,400);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+    }
+
+   
+  
+
+    
+}
+class Capital extends JPanel{
+    Capital()
+    {
+        JButton b1= new JButton("Capital 1");
+        JButton b2= new JButton("Capital 2");
+        JButton b3= new JButton("Capital 3");
+        
+        add(b1);
+        add(b2);
+        add(b3);
+    }
+}
+  class Country extends JPanel
+  {
+      Country()
+      {
+          JCheckBox c1 = new JCheckBox("Country1");
+          JCheckBox c2 = new JCheckBox("Country2");
+          JCheckBox c3 = new JCheckBox("Country3");
+          
+           add(c1);
+           add(c2);
+           add(c3);
+      }
+      
+  }
